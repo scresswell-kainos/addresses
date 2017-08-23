@@ -2,6 +2,10 @@ package com.mysite.addresses;
 
 import org.junit.*;
 
+/**
+ * Test all the things to do with the addressChecker class
+ */
+
 public class TestAddressChecker {
 
     @Test

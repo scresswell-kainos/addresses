@@ -9,13 +9,20 @@ import org.junit.*;
 public class TestAddressChecker {
 
     @Test
-    public void testPostcodeValidator() {
-        addressChecker validator = new addressChecker();
-        String good = "EX1 1DA";
-        Assert.assertTrue(validator.PostcodeValidator(good));
+    public void testValidPostcode() {
+        addressChecker positiveValidator = new addressChecker();
+        String goodPostcode = "EX1 1DA";
+        Assert.assertTrue(positiveValidator.PostcodeValidator(goodPostcode));
+    }
 
-        String bad = "555 12";
-        Assert.assertFalse(validator.PostcodeValidator(bad));
+    @Test
+    public void testInvalidPostcode() {
+        addressChecker negativeValidator = new addressChecker();
+        String[] badPostcodes = new String[]{"555 12"};
+
+        for(int i=0; i< badPostcodes.length; i++){
+            Assert.assertFalse(negativeValidator.PostcodeValidator(badPostcodes[i]));
+        }
     }
 
     @Test

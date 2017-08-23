@@ -10,12 +10,11 @@ public class TestAddressChecker {
 
     @Test
     public void testPostcodeValidator() {
-        String good = "EX1 1DA";
-        String bad = "555 12";
-
         addressChecker validator = new addressChecker();
-
+        String good = "EX1 1DA";
         Assert.assertTrue(validator.PostcodeValidator(good));
+
+        String bad = "555 12";
         Assert.assertFalse(validator.PostcodeValidator(bad));
     }
 

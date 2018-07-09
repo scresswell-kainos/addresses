@@ -17,7 +17,7 @@ public class addressChecker {
 
     public boolean StreetNumberValidator(String street_number) {
         // Regex pattern for numbers
-        String regex_pattern = "[0-9]+";
+        String regex_pattern = "[1-9][0-9]?[/| ]?[a-zA-Z]";
         // return boolean after attempting to match street_number to the above pattern
         return street_number.matches(regex_pattern);
     }
